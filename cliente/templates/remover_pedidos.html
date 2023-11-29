@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Pedidos</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            Remover Pedido Abaixo??
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Codigo do Pedido: {{clientes.cod_pedido}}</h5>
+            <h5 class="card-title">Codigo do Vendedor: {{clientes.cod_vendedor}}</h5>
+            <h5 class="card-title">CPF do Cliente: {{clientes.cpf}}</h5>
+            <h5 class="card-title">Codigo do Produto: {{clientes.cod_produto}}</h5>
+            <h5 class="card-title">Preço: {{clientes.preco_lista}}</h5>
+            <h5 class="card-title">Quantidade: {{clientes.quantidade}}</h5>
+        </div>
+    </div>
+        <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit">Remover</button>
+        </form>
+</body>
+</html>

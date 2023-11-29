@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/excluir.css' %}">
+    <title>Listar Clientes ID</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            Dados do cliente
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ID: {{cliente.id}}</h5>
+            <h5 class="card-title">CPF: {{cliente.cpf}}</h5>
+            <h5 class="card-title">Nome: {{cliente.nome_cliente}}</h5>
+            <h5 class="card-title">Endereço: {{cliente.endereco_cliente}}</h5>
+            <h5 class="card-title">Bairro: {{cliente.bairro_cliente}}</h5>
+            <h5 class="card-title">Cidade: {{cliente.cidade_cliente}}</h5>
+            <h5 class="card-title">CEP: {{cliente.cep_cliente}}</h5>
+            <h5 class="card-title">Nascimento: {{cliente.data_nascimento}}</h5>
+            <h5 class="card-title">Limite de Crédito: {{cliente.limite_credito}}</h5>
+            <h5 class="card-title">Primeira Compra: {{cliente.primeira_compra}}</h5>
+        </div>
+        <!-- Adicione este formulário para confirmar a exclusão -->
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Confirmar Exclusão">
+</form>
+
+    </div>
+</body>
+</html>

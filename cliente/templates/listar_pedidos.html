@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar</title>
+    <link rel="stylesheet" href="{style.css" %}">
+</head>
+<body>
+    <table class="table">
+    <thead>
+        <tr>
+            <th> Codigo Pedido: </th>
+            <th> Codido Vendedor:</th>
+            <th> CPF do Cliente:</th>
+            <th> Codigo Produto:</th>
+            <th> Preco:</th>
+            <th> Quantidade:</th>
+        </tr>
+    </thead>
+    <body>
+        {% for i in pedidos %}
+        <tr>
+            <td>{{i.cod_pedido}}</td>
+            <td>{{i.cod_vendedor}}</td>
+            <td>{{i.cpf}}</td>
+            <td>{{i.cod_produto}}</td>
+            <td>{{i.preco_lista}}</td>
+            <td>{{i.quantidade}}</td>
+        </tr>
+        {% endfor %}
+    </body>
+    </table>
+</body>
+</html>

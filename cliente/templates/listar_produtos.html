@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar</title>
+    <link rel="stylesheet" href="{style.css" %}">
+</head>
+<body>
+    <table class="table">
+    <thead>
+        <tr>
+            <th> Codigo Produto: </th>
+            <th> Nome do Produto:</th>
+            <th> Tipo de Embalagem:</th>
+            <th> Tamanho:</th>
+            <th> Sabor:</th>
+            <th> Preço:</th>
+        </tr>
+    </thead>
+    <body>
+        {% for i in produtos %}
+        <tr>
+            <td>{{i.cod_produto}}</td>
+            <td>{{i.nome_produto}}</td>
+            <td>{{i.embalagem}}</td>
+            <td>{{i.tamanho}}</td>
+            <td>{{i.sabor}}</td>
+            <td>{{i.preco_lista}}</td>
+        </tr>
+        {% endfor %}
+    </body>
+    </table>
+</body>
+</html>

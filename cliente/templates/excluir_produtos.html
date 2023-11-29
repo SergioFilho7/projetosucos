@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/excluir.css' %}">
+    <title>Listar Produtos ID</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            Dados do Produto
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ID: {{produto.cod_produto}}</h5>
+            <h5 class="card-title">Nome: {{produto.nome_produto}}</h5>
+            <h5 class="card-title">Endereço: {{produto.embalagem}}</h5>
+            <h5 class="card-title">Bairro: {{produto.tamanho}}</h5>
+            <h5 class="card-title">Cidade: {{produto.sabor}}</h5>
+            <h5 class="card-title">CEP: {{produto.preco_lista}}</h5>
+        </div>
+        <!-- Adicione este formulário para confirmar a exclusão -->
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Confirmar Exclusão">
+</form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Clientes ID</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .card-header {
+            background-color: #000000;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .card-body {
+            padding: 10px;
+            border: 1px solid #000000;
+            /* Adiciona uma borda interna */
+            border-radius: 0 0 10px 10px;
+            /* Mantém os cantos arredondados na parte inferior */
+        }
+
+        .card-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<div class="card">
+    <div class="card-header">
+        Dados do Cliente
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Nome: {{clientes_id.nome_cliente}}</h5>
+        <h5 class="card-title">CPF: {{clientes_id.cpf}}</h5>
+        <h5 class="card-title">CNPJ: {{clientes_id.cnpj}}</h5>
+        <h5 class="card-title">Endereço: {{clientes_id.endereco_cliente}}</h5>
+        <h5 class="card-title">Bairro: {{clientes_id.bairro_cliente}}</h5>
+        <h5 class="card-title">Cidade: {{clientes_id.cidade_cliente}}</h5>
+        <h5 class="card-title">CEP: {{clientes_id.cep_cliente}}</h5>
+        <h5 class="card-title">Data de Nascimento: {{clientes_id.data_nascimento}}</h5>
+        <h5 class="card-title">Limite de Crédito: {{clientes_id.limite_credito}}</h5>
+        <h5 class="card-title">Primeira Compra: {{clientes_id.primeira_compra}}</h5>
+    </div>
+</div>
+</body>
+
+</html>

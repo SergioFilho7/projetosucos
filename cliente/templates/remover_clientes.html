@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Cliente</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .card-header {
+            background-color: #000000;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .card-body {
+            padding: 10px;
+            border: 1px solid #000000;
+            /* Adiciona uma borda interna */
+            border-radius: 0 0 10px 10px;
+            /* Mantém os cantos arredondados na parte inferior */
+        }
+
+        .card-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Definição simples para a classe btn btn-danger */
+        .btn {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">
+            Remover Cliente Abaixo?
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">CPF: {{clientes.cpf}}</h5>
+            <h5 class="card-title">Nome do Cliente: {{clientes.nome_cliente}}</h5>
+            <h5 class="card-title">Endereço: {{clientes.endereco_cliente}}</h5>
+            <h5 class="card-title">Bairro: {{clientes.bairro_cliente}}</h5>
+            <h5 class="card-title">Cidade: {{clientes.cidade_cliente}}</h5>
+            <h5 class="card-title">CEP: {{clientes.cep_cliente}}</h5>
+            <h5 class="card-title">Data Nascimento: {{clientes.data_nascimento}}</h5>
+            <h5 class="card-title">Limite de Credito: {{clientes.limite_credito}}</h5>
+            <h5 class="card-title">Primeira Compra? {{clientes.primeira_compra}}</h5>
+            <form method="post">
+                {% csrf_token %}
+                <button class="btn btn-danger" type="submit">Remover</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar</title>
+    <link rel="stylesheet" href="{style.css" %}">
+</head>
+<body>
+    <table class="table">
+    <thead>
+        <tr>
+            <th> Codigo Vendedor: </th>
+            <th> Nome do Vendedor:</th>
+        </tr>
+    </thead>
+    <body>
+        {% for i in vendedores %}
+        <tr>
+            <td>{{i.cod_vendedor}}</td>
+            <td>{{i.nome_vendedor}}</td>
+        </tr>
+        {% endfor %}
+    </body>
+    </table>
+</body>
+</html>

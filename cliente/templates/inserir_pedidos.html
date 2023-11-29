@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load meus_filtros %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar</title>
+</head>
+
+<body>
+    <main class="container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{form.cod_pedido.errors}}
+                <label> Codigo do Pedido: </label>
+                {{form.cod_pedido|addclass:'form-control'}}
+            </div>
+            <div class="form-group">
+                {{form.cod_vendedor.errors}}
+                <label>Codigo do Vendedor:</label>
+                {{form.cod_vendedor|addclass:'form-control'}}
+            </div>
+            <div class="form-group">
+                {{form.cpf.errors}}
+                <label>CPF do Cliente:</label>
+                {{form.cpf|addclass:'form-control'}}
+            </div>
+            <div class="form-group">
+                {{form.cod_produto.errors}}
+                <label>Codigo do Produto:</label>
+                {{form.cod_produto|addclass:'form-control'}}
+            </div>
+            <div class="form-group">
+                {{form.preco_lista.errors}}
+                <label>Preco:</label>
+                {{form.preco_lista|addclass:'form-control'}}
+            </div>
+            <div class="form-group">
+                {{form.quantidade.errors}}
+                <label>Quantidade:</label>
+                {{form.quantidade|addclass:'form-control'}}
+            </div>
+            <div>
+                <input type="submit" name="Cadastrar">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
